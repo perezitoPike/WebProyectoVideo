@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VideoPlus | Anime Online</title>
+
+    <meta name="description"
+        content="La mejor página para ver anime online gratis. Últimos capítulos, estrenos y series populares sin restricciones.">
+    <meta name="keywords"
+        content="anime online, ver anime, anime sub español, anime gratis, naruto online, jkanime, anime latino">
+
+    <link rel="icon" href="img/logoImage.png" type="image/x-icon">
+    <link rel="stylesheet" href="estiloDirectorio.css">
+</head>
+
+<body>
+
+    <!-- NAVEGACION -->
+    <header>
+        <nav id="navegacion" aria-label="Barra de navegación principal">
+            <div class="logo">
+                <a href="/">
+                    <img src="img/logoHorizontal.png" alt="Logo de VideoPlus">
+                </a>
+            </div>
+
+            <form class="buscador" role="search" aria-label="Buscador de series">
+                <input class="campoLlenar" type="search" name="buscar" placeholder="Buscar Serie..." aria-label="Buscar serie">
+            </form>
+
+            <div class="iconUser">
+                <button aria-label="Perfil de usuario">
+                    <img src="img/iconUser.png" alt="Icono usuario">
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main id="contenido-principal">
+
+        <!-- SECCION DESTACADA -->
+        <section class="seccion-destacados" aria-labelledby="titulo-destacado">
+            <h2 id="titulo-destacado" class="visually-hidden">Serie destacada</h2>
+
+            <article class="contenedor-portada">
+                <img src="img/Fondo_test.jpg" alt="Portada de la serie destacada">
+
+                <div class="texto-superpuesto">
+                    <h3>Título de la Serie</h3>
+                    <p>
+                        Descripción de la serie... Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Sapiente assumenda aliquam odio dolores.
+                    </p>
+
+                    <div class="acciones-portada">
+                        <button>Detalles</button>
+                        <button>Ver ahora</button>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- FILTROS -->
+        <section aria-labelledby="filtros-titulo">
+            <h2 id="filtros-titulo" class="visually-hidden">Filtrar contenido</h2>
+
+            <form class="form-filtros" aria-label="Filtros de búsqueda">
+                <div class="campo-filtro">
+                    <label for="genero">Género</label>
+                    <select name="genero" id="genero">
+                        <option>Sin genero</option>
+                        <option>Acción</option>
+                        <option>Aventura</option>
+                        <option>Comedia</option>
+                        <option>Demonios</option>
+                    </select>
+                </div>
+
+                <div class="campo-filtro">
+                    <label for="tipo">Tipo</label>
+                    <select name="tipo" id="tipo">
+                        <option>Sin tipo</option>
+                        <option>Animes</option>
+                        <option>Películas</option>
+                        <option>Series</option>
+                        <option>Cortos</option>
+                    </select>
+                </div>
+
+                <div class="campo-filtro">
+                    <label for="estado">Estado</label>
+                    <select name="estado" id="estado">
+                        <option>Ninguno</option>
+                        <option>En emisión</option>
+                        <option>Finalizado</option>
+                        <option>Por estrenar</option>
+                    </select>
+                </div>
+
+                <div class="campo-filtro">
+                    <label for="temporada">Temporada</label>
+                    <select name="temporada" id="temporada">
+                        <option>Sin temporada</option>
+                        <option>Invierno</option>
+                        <option>Primavera</option>
+                        <option>Verano</option>
+                        <option>Otoño</option>
+                    </select>
+                </div>
+
+                <div class="campo-filtro">
+                    <label for="orden">Orden</label>
+                    <select name="orden" id="orden">
+                        <option>Descendente</option>
+                        <option>Ascendente</option>
+                    </select>
+                </div>
+
+                <button type="submit">Filtrar</button>
+            </form>
+        </section>
+
+        <!-- Top Series -->
+        <section aria-labelledby="top-series-titulo">
+            <h2 id="top-series-titulo">Top Series</h2>
+            <p class="descripcion-seccion">Las series más vistas</p>
+            <button class="btn-vermas">Ver más</button>
+
+            <div class="grid-series">
+                <article class="tarjeta-serie">
+                    <img src="img/portadaK.jpg" alt="Portada de la serie">
+                    <h3>Título Serie</h3>
+                    <p>Breve descripción de la serie.</p>
+                    <button>Ver</button>
+                </article>
+                <article class="tarjeta-serie">
+                    <img src="img/portadaK.jpg" alt="Portada de la serie">
+                    <h3>Título Serie</h3>
+                    <p>Breve descripción de la serie.</p>
+                    <button>Ver</button>
+                </article>
+                <article class="tarjeta-serie">
+                    <img src="img/portadaK.jpg" alt="Portada de la serie">
+                    <h3>Título Serie</h3>
+                    <p>Breve descripción de la serie.</p>
+                    <button>Ver</button>
+                </article>
+                <article class="tarjeta-serie">
+                    <img src="img/portadaK.jpg" alt="Portada de la serie">
+                    <h3>Título Serie</h3>
+                    <p>Breve descripción de la serie.</p>
+                    <button>Ver</button>
+                </article>
+            </div>
+        </section>
+
+        <!-- SERIES RECOMENDADAS -->
+        <section aria-labelledby="top-series-titulo">
+            <h2 id="top-series-titulo">Series recomendadas</h2>
+            <p class="descripcion-seccion">Las series más vistas</p>
+            <button class="btn-vermas">Ver más</button>
+
+            <div class="grid-series">
+                <article class="tarjeta-serie">
+                    <img src="img/portadaK.jpg" alt="Portada de la serie">
+                    <h3>Título Serie</h3>
+                    <p>Breve descripción de la serie.</p>
+                    <button>Ver</button>
+                </article>
+                <article class="tarjeta-serie">
+                    <img src="img/portadaK.jpg" alt="Portada de la serie">
+                    <h3>Título Serie</h3>
+                    <p>Breve descripción de la serie.</p>
+                    <button>Ver</button>
+                </article>
+                <article class="tarjeta-serie">
+                    <img src="img/portadaK.jpg" alt="Portada de la serie">
+                    <h3>Título Serie</h3>
+                    <p>Breve descripción de la serie.</p>
+                    <button>Ver</button>
+                </article>
+                <article class="tarjeta-serie">
+                    <img src="img/portadaK.jpg" alt="Portada de la serie">
+                    <h3>Título Serie</h3>
+                    <p>Breve descripción de la serie.</p>
+                    <button>Ver</button>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2025 VideoPlus - Todos los derechos reservados</p>
+
+        <div class="sociales">
+            <a href="#"><img src="img/icons/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="img/icons/github.png" alt="GitHub"></a>
+            <a href="#"><img src="img/icons/linkedin.png" alt="LinkedIn"></a>
+            <a href="#"><img src="img/icons/twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="img/icons/whatsapp.png" alt="WhatsApp"></a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
