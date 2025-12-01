@@ -11,8 +11,8 @@
     <meta name="keywords"
         content="anime online, ver anime, anime sub español, anime gratis, naruto online, jkanime, anime latino">
 
-    <link rel="icon" href="img/logoImage.png" type="image/x-icon">
-    <link rel="stylesheet" href="estiloDirectorio.css">
+    <link rel="icon" href="../img/logoImage.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/estiloDirectorio.css">
 </head>
 
 <body>
@@ -21,19 +21,20 @@
     <header>
         <nav id="navegacion" aria-label="Barra de navegación principal">
             <div class="logo">
-                <a href="/">
-                    <img src="img/logoHorizontal.png" alt="Logo de VideoPlus">
+                <a href="directorio.html">
+                    <img src="../img/logoHorizontal.png" alt="Logo de VideoPlus">
                 </a>
             </div>
 
             <form class="buscador" role="search" aria-label="Buscador de series">
-                <input class="campoLlenar" type="search" name="buscar" placeholder="Buscar Serie..." aria-label="Buscar serie">
+                <input class="campoLlenar" type="search" name="buscar" placeholder="Buscar Serie..."
+                    aria-label="Buscar serie">
             </form>
 
             <div class="iconUser">
-                <button aria-label="Perfil de usuario">
-                    <img src="img/iconUser.png" alt="Icono usuario">
-                </button>
+                <a href="/html/login.html" aria-label="Perfil de usuario">
+                    <img src="../img/iconUser.png" alt="Icono usuario">
+                </a>
             </div>
         </nav>
     </header>
@@ -43,10 +44,10 @@
 
         <!-- SECCION DESTACADA -->
         <section class="seccion-destacados" aria-labelledby="titulo-destacado">
-            <h2 id="titulo-destacado" class="visually-hidden">Serie destacada</h2>
+            <h2 id="titulo-destacado" class="titulo-seccion">Serie destacada</h2>
 
             <article class="contenedor-portada">
-                <img src="img/Fondo_test.jpg" alt="Portada de la serie destacada">
+                <img src="../img/Fondo_test2.jpg" alt="Portada de la serie destacada">
 
                 <div class="texto-superpuesto">
                     <h3>Título de la Serie</h3>
@@ -56,8 +57,8 @@
                     </p>
 
                     <div class="acciones-portada">
-                        <button>Detalles</button>
-                        <button>Ver ahora</button>
+                        <a href="/html/informacion.html"><button>Detalles</button></a>
+                        <a href="/html/reproductor.html"><button>Ver ahora</button></a>
                     </div>
                 </div>
             </article>
@@ -65,8 +66,7 @@
 
         <!-- FILTROS -->
         <section aria-labelledby="filtros-titulo">
-            <h2 id="filtros-titulo" class="visually-hidden">Filtrar contenido</h2>
-
+            <h2 id="filtros-titulo" class="titulo-seccion">Filtrar contenido</h2>
             <form class="form-filtros" aria-label="Filtros de búsqueda">
                 <div class="campo-filtro">
                     <label for="genero">Género</label>
@@ -119,6 +119,7 @@
                     </select>
                 </div>
 
+                <!-- <button type="submit">Filtrar</button> -->
                 <button type="submit">Filtrar</button>
             </form>
         </section>
@@ -127,32 +128,32 @@
         <section aria-labelledby="top-series-titulo">
             <h2 id="top-series-titulo">Top Series</h2>
             <p class="descripcion-seccion">Las series más vistas</p>
-            <button class="btn-vermas">Ver más</button>
+            <a href="/html/informacion.html"><button class="btn-vermas">Ver más</button></a>
 
             <div class="grid-series">
                 <article class="tarjeta-serie">
-                    <img src="img/portadaK.jpg" alt="Portada de la serie">
+                    <img src="../img/portadaK.jpg" alt="Portada de la serie">
                     <h3>Título Serie</h3>
                     <p>Breve descripción de la serie.</p>
-                    <button>Ver</button>
+              <a href="/html/informacion.html"><button class="btn-vermas">Ver</button></a>
                 </article>
                 <article class="tarjeta-serie">
-                    <img src="img/portadaK.jpg" alt="Portada de la serie">
+                    <img src="../img/portadaK.jpg" alt="Portada de la serie">
                     <h3>Título Serie</h3>
                     <p>Breve descripción de la serie.</p>
-                    <button>Ver</button>
+              <a href="/html/informacion.html"><button class="btn-vermas">Ver</button></a>
                 </article>
                 <article class="tarjeta-serie">
-                    <img src="img/portadaK.jpg" alt="Portada de la serie">
+                    <img src="../img/portadaK.jpg" alt="Portada de la serie">
                     <h3>Título Serie</h3>
                     <p>Breve descripción de la serie.</p>
-                    <button>Ver</button>
+              <a href="/html/informacion.html"><button class="btn-vermas">Ver</button></a>
                 </article>
                 <article class="tarjeta-serie">
-                    <img src="img/portadaK.jpg" alt="Portada de la serie">
+                    <img src="../img/portadaK.jpg" alt="Portada de la serie">
                     <h3>Título Serie</h3>
                     <p>Breve descripción de la serie.</p>
-                    <button>Ver</button>
+              <a href="/html/informacion.html"><button class="btn-vermas">Ver</button></a>
                 </article>
             </div>
         </section>
@@ -161,32 +162,32 @@
         <section aria-labelledby="top-series-titulo">
             <h2 id="top-series-titulo">Series recomendadas</h2>
             <p class="descripcion-seccion">Las series más vistas</p>
-            <button class="btn-vermas">Ver más</button>
+                          <a href="/html/informacion.html"><button class="btn-vermas">Ver más</button></a>
 
             <div class="grid-series">
                 <article class="tarjeta-serie">
-                    <img src="img/portadaK.jpg" alt="Portada de la serie">
+                    <img src="../img/portadaK.jpg" alt="Portada de la serie">
                     <h3>Título Serie</h3>
                     <p>Breve descripción de la serie.</p>
-                    <button>Ver</button>
+              <a href="/html/informacion.html"><button class="btn-vermas">Ver</button></a>
                 </article>
                 <article class="tarjeta-serie">
-                    <img src="img/portadaK.jpg" alt="Portada de la serie">
+                    <img src="../img/portadaK.jpg" alt="Portada de la serie">
                     <h3>Título Serie</h3>
                     <p>Breve descripción de la serie.</p>
-                    <button>Ver</button>
+                                  <a href="/html/informacion.html"><button class="btn-vermas">Ver</button></a>
                 </article>
                 <article class="tarjeta-serie">
-                    <img src="img/portadaK.jpg" alt="Portada de la serie">
+                    <img src="../img/portadaK.jpg" alt="Portada de la serie">
                     <h3>Título Serie</h3>
                     <p>Breve descripción de la serie.</p>
-                    <button>Ver</button>
+                                  <a href="/html/informacion.html"><button class="btn-vermas">Ver</button></a>
                 </article>
                 <article class="tarjeta-serie">
-                    <img src="img/portadaK.jpg" alt="Portada de la serie">
+                    <img src="../img/portadaK.jpg" alt="Portada de la serie">
                     <h3>Título Serie</h3>
                     <p>Breve descripción de la serie.</p>
-                    <button>Ver</button>
+                                  <a href="/html/informacion.html"><button class="btn-vermas">Ver</button></a>
                 </article>
             </div>
         </section>
@@ -197,11 +198,11 @@
         <p>© 2025 VideoPlus - Todos los derechos reservados</p>
 
         <div class="sociales">
-            <a href="#"><img src="img/icons/facebook.png" alt="Facebook"></a>
-            <a href="#"><img src="img/icons/github.png" alt="GitHub"></a>
-            <a href="#"><img src="img/icons/linkedin.png" alt="LinkedIn"></a>
-            <a href="#"><img src="img/icons/twitter.png" alt="Twitter"></a>
-            <a href="#"><img src="img/icons/whatsapp.png" alt="WhatsApp"></a>
+            <a href="#"><img src="../img/icons/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="../img/icons/github.png" alt="GitHub"></a>
+            <a href="#"><img src="../img/icons/linkedin.png" alt="LinkedIn"></a>
+            <a href="#"><img src="../img/icons/twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="../img/icons/whatsapp.png" alt="WhatsApp"></a>
         </div>
     </footer>
 

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VideoPlus | Anime Online</title>
+
+    <meta name="description"
+        content="La mejor página para ver anime online gratis. Últimos capítulos, estrenos y series populares sin restricciones.">
+    <meta name="keywords"
+        content="anime online, ver anime, anime sub español, anime gratis, naruto online, jkanime, anime latino">
+
+    <link rel="icon" href="../img/logoImage.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/estiloDirectorio.css">
+</head>
+
+<body>
+
+    <!-- NAVEGACION -->
+    <header>
+        <nav id="navegacion" aria-label="Barra de navegación principal">
+            <div class="logo">
+                <a href="/html/directorio.html">
+                    <img src="../img/logoHorizontal.png" alt="Logo de VideoPlus">
+                </a>
+            </div>
+
+            <form class="buscador" role="search" aria-label="Buscador de series">
+                <input class="campoLlenar" type="search" name="buscar" placeholder="Buscar Serie..."
+                    aria-label="Buscar serie">
+            </form>
+
+            <div class="iconUser">
+                <a href="/html/login.html" aria-label="Perfil de usuario">
+                    <img src="../img/iconUser.png" alt="Icono usuario">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main id="contenido-principal">
+        <!-- INICIAR SESION -->
+        <section id="login-section" style="display: block;">
+            <h2 id="top-series-titulo">LOGIN</h2>
+            <p class="descripcion-seccion">Inicia sesion con tu cuenta de Plus Videos</p>
+            <form class="login-input">
+                <label for="usuario">Usuario:</label>
+                <input class="campoLlenar" type="text" name="usuario" placeholder="Usuario"
+                    aria-label="Ingresar usuario"><br>
+                <label for="password">Contraseña:</label>
+                <input class="campoLlenar" type="password" name="password" placeholder="Contraseña"
+                    aria-label="Ingresar contraseña">
+            </form>
+            <button class="btn-login">Iniciar sesión</button>
+            <p class="descripcion-seccion">¿No tienes cuenta? <a href="" id="show-register">registrate</a></p>
+        </section>
+        <!-- Registro -->
+        <section id="register-section" style="display: none;">
+            <h2 id="top-series-titulo">REGISTRO</h2>
+            <p class="descripcion-seccion">Crea tu cuenta y ve los estrenos con anticipación</p>
+            <form class="login-input">
+                <label for="usuario">Usuario:</label>
+                <input class="campoLlenar" type="text" name="usuario" placeholder="Usuario"
+                    aria-label="Ingresar usuario">
+                <label for="password">Contraseña:</label>
+                <input class="campoLlenar" type="password" name="password" placeholder="Contraseña"
+                    aria-label="Ingresar contraseña">
+                <label for="confirmar-password">Condirmar contraseña:</label>
+                <input class="campoLlenar" type="confirmar-password" name="confirmar-password"
+                    placeholder="Confirmar Contraseña" aria-label="Confirmar contraseña">
+                <label for="correo">Correo:</label>
+                <input class="campoLlenar" type="email" name="correo" placeholder="Correo" aria-label="Ingresar correo">
+            </form>
+            <button class="btn-login">Registrarse</button>
+            <p class="descripcion-seccion">¿Ya tienes una cuenta? <a href="" id="show-login">inicia sesión</a></p>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2025 VideoPlus - Todos los derechos reservados</p>
+
+        <div class="sociales">
+            <a href="#"><img src="../img/icons/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="../img/icons/github.png" alt="GitHub"></a>
+            <a href="#"><img src="../img/icons/linkedin.png" alt="LinkedIn"></a>
+            <a href="#"><img src="../img/icons/twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="../img/icons/whatsapp.png" alt="WhatsApp"></a>
+        </div>
+    </footer>
+    <script src="../javaScript/javaScript.js"></script>
+</body>
+
+</html>

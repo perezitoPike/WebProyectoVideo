@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VideoPlus | Anime Online</title>
+
+    <meta name="description"
+        content="La mejor página para ver anime online gratis. Últimos capítulos, estrenos y series populares sin restricciones.">
+    <meta name="keywords"
+        content="anime online, ver anime, anime sub español, anime gratis, naruto online, jkanime, anime latino">
+
+    <link rel="icon" href="../img/logoImage.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/estiloDirectorio.css">
+</head>
+
+<body>
+
+    <!-- NAVEGACION -->
+    <header>
+        <nav id="navegacion" aria-label="Barra de navegación principal">
+            <div class="logo">
+                <a href="/html/directorio.html">
+                    <img src="../img/logoHorizontal.png" alt="Logo de VideoPlus">
+                </a>
+            </div>
+
+            <form class="buscador" role="search" aria-label="Buscador de series">
+                <input class="campoLlenar" type="search" name="buscar" placeholder="Buscar Serie..."
+                    aria-label="Buscar serie">
+            </form>
+
+            <div class="iconUser">
+                <a href="/html/login.html" aria-label="Perfil de usuario">
+                    <img src="../img/iconUser.png" alt="Icono usuario">
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main id="contenido-principal">
+        <section id="seccion-reproductor">
+            <!-- VIDEO -->
+            <div class="contenedor-video">
+                <iframe width="100%" height="360" src="https://www.youtube.com/embed/o0Bp0vL1aGg?si=7nmC7lezpBIkoN6M"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            <!-- LISTA DE CAPÍTULOS -->
+            <aside class="lista-capitulos">
+                <h3 class="titulo-lista-capitulos">Capítulos</h3>
+                <ul>
+                    <li class="capitulos">
+                        <img src="../img/portadaK.jpg" alt="Miniatura">
+                        <div>
+                            <span class="numero-capitulo">Capítulo 1</span>
+                            <span class="titulo-capitulo">El inicio de la aventura</span>
+                        </div>
+                    </li>                   
+                </ul>
+            </aside>
+        </section>
+
+
+        <!-- Capitulos -->
+        <section aria-labelledby="top-series-titulo" class="seccion-capitulos">
+            <h2 id="top-series-titulo">Caputilos de la serie</h2>
+            <div class="grid-series">
+                <article class="tarjeta-serie">
+                    <img src="../img/portadaK.jpg" alt="Portada de la serie">
+                    <h3>Capitulo 1</h3>
+                    <p>Breve descripción del capitulo.</p>
+                                        <a href="/html/reproductor.html"><button class="btn-vermas">Ver capitulo</button></a>
+                </article>
+                <article class="tarjeta-serie">
+                    <img src="../img/portadaK.jpg" alt="Portada de la serie">
+                    <h3>Capitulo 1</h3>
+                    <p>Breve descripción de la capitulo.</p>
+                                        <a href="/html/reproductor.html"><button class="btn-vermas">Ver capitulo</button></a>
+                </article>
+                <article class="tarjeta-serie">
+                    <img src="../img/portadaK.jpg" alt="Portada de la serie">
+                    <h3>Capitulo 1</h3>
+                    <p>Breve descripción de la capitulo.</p>
+                                        <a href="/html/reproductor.html"><button class="btn-vermas">Ver capitulo</button></a>
+                </article>
+                <article class="tarjeta-serie">
+                    <img src="../img/portadaK.jpg" alt="Portada de la serie">
+                    <h3>Capitulo 1</h3>
+                    <p>Breve descripción de la capitulo.</p>
+                                        <a href="/html/reproductor.html"><button class="btn-vermas">Ver capitulo</button></a>
+                </article>
+            </div>
+        </section>
+
+        <!-- Series Similares -->
+        <section aria-labelledby="top-series-titulo">
+            <h2 id="top-series-titulo">Series similares</h2>
+            <p class="descripcion-seccion">Otros usuarios tambien recominedan</p>
+            <button class="btn-vermas">Ver más</button>
+
+            <div class="grid-series">
+                <article class="tarjeta-serie">
+                    <img src="../img/portadaK.jpg" alt="Portada de la serie">
+                    <h3>Título Serie</h3>
+                    <p>Breve descripción de la serie.</p>
+                                        <a href="/html/informacion.html"><button class="btn-vermas">Ver</button></a>
+                </article>
+                <article class="tarjeta-serie">
+                    <img src="../img/portadaK.jpg" alt="Portada de la serie">
+                    <h3>Título Serie</h3>
+                    <p>Breve descripción de la serie.</p>
+                                        <a href="/html/informacion.html"><button class="btn-vermas">Ver</button></a>
+                </article>
+                <article class="tarjeta-serie">
+                    <img src="../img/portadaK.jpg" alt="Portada de la serie">
+                    <h3>Título Serie</h3>
+                    <p>Breve descripción de la serie.</p>
+                                        <a href="/html/informacion.html"><button class="btn-vermas">Ver</button></a>
+                </article>
+                <article class="tarjeta-serie">
+                    <img src="../img/portadaK.jpg" alt="Portada de la serie">
+                    <h3>Título Serie</h3>
+                    <p>Breve descripción de la serie.</p>
+                                        <a href="/html/informacion.html"><button class="btn-vermas">Ver</button></a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2025 VideoPlus - Todos los derechos reservados</p>
+
+        <div class="sociales">
+            <a href="#"><img src="../img/icons/facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="../img/icons/github.png" alt="GitHub"></a>
+            <a href="#"><img src="../img/icons/linkedin.png" alt="LinkedIn"></a>
+            <a href="#"><img src="../img/icons/twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="../img/icons/whatsapp.png" alt="WhatsApp"></a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
