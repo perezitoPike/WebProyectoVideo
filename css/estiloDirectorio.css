@@ -21,7 +21,6 @@
     --altura-video: 400px;
 }
 
-/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -267,6 +266,10 @@ section #top-series-titulo {
     text-align: center;
     color: var(--texto-gris);
     margin-bottom: 15px;
+}
+
+.descripcion-seccion a{
+    color: var(--color-terciario);
 }
 
 a {
