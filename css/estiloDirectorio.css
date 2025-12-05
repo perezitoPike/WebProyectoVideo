@@ -569,6 +569,10 @@ footer p {
     display: none;
 }
 
+.ocultar-menu{
+    display: none;
+}
+
 /* PAGINADOR */
 .grid-paginas {
     display: flex;

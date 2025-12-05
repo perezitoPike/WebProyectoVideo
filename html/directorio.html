@@ -21,7 +21,7 @@
             </div>
 
             <form class="buscador" role="search">
-                <input class="campoLlenar" type="search" name="buscar" placeholder="Buscar Serie...">
+                <input id="buscador" class="campoLlenar" type="search" name="buscar" placeholder="Buscar Serie...">
             </form>
 
             <div class="iconUser">
@@ -31,6 +31,29 @@
             </div>
         </nav>
     </header>
+    <!-- Buscador -->
+    <main id="contenido-busqueda" class="ocultar-menu">
+        <section>
+            <h2 id="top-series-titulo">Resultados de Busqueda</h2>
+            <div id="contenedorBusqueda-series" class="grid-series">
+                <!-- <article class="tarjeta-serie">
+                    <div class="img-portada">
+                        <img src="../img/portadaK.jpg" alt="Portada de la serie">
+                    </div>
+                    <div class="info-tarjetas">
+                        <h3>Título Serie</h3>
+                        <p>Breve descripción de la serie.</p>
+                        <a href="informacion.html"><button class="btn-vermas">Ver</button></a>
+                    </div>
+                </article>                 -->
+            </div>
+            <div id="contenedor-pagina-busqueda" class="grid-paginas">
+                <button id="prev" class="btn-pagina">&#10216</button>
+                <!-- <button class="btn-pagina pagina-activa">1</button> -->
+                <button id="next" class="btn-pagina">&#10217</button>
+            </div>
+        </section>
+    </main>
 
     <!-- CONTENIDO PRINCIPAL -->
     <main id="contenido-principal">
@@ -62,53 +85,53 @@
             <h2 id="filtros-titulo" class="titulo-seccion">Filtrar contenido</h2>
             <form class="form-filtros">
                 <div class="campo-filtro">
+                    <label for="tipo">Tipo</label>
+                    <select name="tipo" id="tipo">
+                        <option value="">Todos</option>
+                        <option value="tv">Series</option>
+                        <option value="movie">Películas</option>
+                        <option value="ova">Ovas</option>
+                        <option value="special">Especiales</option>
+                        <option value="ona">Ona</option>
+                        <option value="music">Musica</option>
+                    </select>
+                </div>
+                <div class="campo-filtro">
                     <label for="genero">Género</label>
                     <select name="genero" id="genero">
-                        <option>Sin genero</option>
-                        <option>Acción</option>
-                        <option>Aventura</option>
-                        <option>Comedia</option>
-                        <option>Demonios</option>
+                        <option value="">Todos</option>
+                        <option value="1">Accion</option>
+                        <option value="2">Aventura</option>
+                        <option value="4">Comedi</option>
+                        <option value="8">Drama</option>
+                        <option value="10">Fantasia</option>
+                        <option value="22">Romance</option>
+                        <option value="24">Sci-Fi</option>
+                        <option value="27">Shounen</option>
+                        <option value="36">Dia a dia</option>
+                        <option value="37">Supernatural</option>
                     </select>
                 </div>
 
-                <div class="campo-filtro">
-                    <label for="tipo">Tipo</label>
-                    <select name="tipo" id="tipo">
-                        <option>Sin tipo</option>
-                        <option>Animes</option>
-                        <option>Películas</option>
-                        <option>Series</option>
-                        <option>Cortos</option>
-                    </select>
-                </div>
 
                 <div class="campo-filtro">
                     <label for="estado">Estado</label>
                     <select name="estado" id="estado">
-                        <option>Ninguno</option>
-                        <option>En emisión</option>
-                        <option>Finalizado</option>
-                        <option>Por estrenar</option>
+                        <option value="">Todos</option>
+                        <option value="airing">En emisión</option>
+                        <option value="complete">Completado</option>
+                        <option value="uncoming">Proximamente</option>
                     </select>
                 </div>
 
                 <div class="campo-filtro">
                     <label for="temporada">Temporada</label>
                     <select name="temporada" id="temporada">
-                        <option>Sin temporada</option>
-                        <option>Invierno</option>
-                        <option>Primavera</option>
-                        <option>Verano</option>
-                        <option>Otoño</option>
-                    </select>
-                </div>
-
-                <div class="campo-filtro">
-                    <label for="orden">Orden</label>
-                    <select name="orden" id="orden">
-                        <option>Descendente</option>
-                        <option>Ascendente</option>
+                        <option value="">Sin temporada</option>
+                        <option value="winter">Invierno</option>
+                        <option value="spring">Primavera</option>
+                        <option value="summer">Verano</option>
+                        <option value="fall">Otoño</option>
                     </select>
                 </div>
                 <!-- <button type="submit">Filtrar</button> -->
@@ -120,9 +143,8 @@
             <h2 id="top-series-titulo">Top Series</h2>
             <p class="descripcion-seccion">Las series más vistas</p>
             <a href="informacion.html"><button class="btn-vermas">Ver más</button></a>
-
-            <div class="grid-series">
-                <article class="tarjeta-serie">
+            <div id="contenedor-series-top" class="grid-series">
+                <!-- <article class="tarjeta-serie">
                     <div class="img-portada">
                         <img src="../img/portadaK.jpg" alt="Portada de la serie">
                     </div>
@@ -131,45 +153,12 @@
                         <p>Breve descripción de la serie.</p>
                         <a href="informacion.html"><button class="btn-vermas">Ver</button></a>
                     </div>
-                </article>
-                <article class="tarjeta-serie">
-                    <div class="img-portada">
-                        <img src="../img/portadaK.jpg" alt="Portada de la serie">
-                    </div>
-                    <div class="info-tarjetas">
-                        <h3>Título Serie</h3>
-                        <p>Breve descripción de la serie.</p>
-                        <a href="informacion.html"><button class="btn-vermas">Ver</button></a>
-                    </div>
-                </article>
-                <article class="tarjeta-serie">
-                    <div class="img-portada">
-                        <img src="../img/portadaK.jpg" alt="Portada de la serie">
-                    </div>
-                    <div class="info-tarjetas">
-                        <h3>Título Serie</h3>
-                        <p>Breve descripción de la serie.</p>
-                        <a href="informacion.html"><button class="btn-vermas">Ver</button></a>
-                    </div>
-                </article>
-                <article class="tarjeta-serie">
-                    <div class="img-portada">
-                        <img src="../img/portadaK.jpg" alt="Portada de la serie">
-                    </div>
-                    <div class="info-tarjetas">
-                        <h3>Título Serie</h3>
-                        <p>Breve descripción de la serie.</p>
-                        <a href="informacion.html"><button class="btn-vermas">Ver</button></a>
-                    </div>
-                </article>
+                </article>                 -->
             </div>
-            <div class="grid-paginas">
-                <button class="btn-pagina">&#10216</button>
-                <button class="btn-pagina pagina-activa">1</button>
-                <button class="btn-pagina">2</button>
-                <button class="btn-pagina">3</button>
-                <button class="btn-pagina">4</button>
-                <button class="btn-pagina">&#10217</button>
+            <div id="paginas-top" class="grid-paginas">
+                <button id="previo-top" class="btn-pagina">&#10216</button>
+                <!-- <button id="pagina-actual" class="btn-pagina pagina-activa">1</button> -->
+                <button id="next-top" class="btn-pagina">&#10217</button>
             </div>
         </section>
 
@@ -178,8 +167,8 @@
             <h2 id="top-series-titulo">Series recomendadas</h2>
             <p class="descripcion-seccion">Las series más vistas</p>
             <a href="informacion.html"><button class="btn-vermas">Ver más</button></a>
-            <div class="grid-series">
-                <article class="tarjeta-serie">
+            <div id="contenedor-recomendados" class="grid-series">
+                <!-- <article class="tarjeta-serie">
                     <div class="img-portada">
                         <img src="../img/portadaK.jpg" alt="Portada de la serie">
                     </div>
@@ -188,45 +177,12 @@
                         <p>Breve descripción de la serie.</p>
                         <a href="informacion.html"><button class="btn-vermas">Ver</button></a>
                     </div>
-                </article>
-                <article class="tarjeta-serie">
-                    <div class="img-portada">
-                        <img src="../img/portadaK.jpg" alt="Portada de la serie">
-                    </div>
-                    <div class="info-tarjetas">
-                        <h3>Título Serie</h3>
-                        <p>Breve descripción de la serie.</p>
-                        <a href="informacion.html"><button class="btn-vermas">Ver</button></a>
-                    </div>
-                </article>
-                <article class="tarjeta-serie">
-                    <div class="img-portada">
-                        <img src="../img/portadaK.jpg" alt="Portada de la serie">
-                    </div>
-                    <div class="info-tarjetas">
-                        <h3>Título Serie</h3>
-                        <p>Breve descripción de la serie.</p>
-                        <a href="informacion.html"><button class="btn-vermas">Ver</button></a>
-                    </div>
-                </article>
-                <article class="tarjeta-serie">
-                    <div class="img-portada">
-                        <img src="../img/portadaK.jpg" alt="Portada de la serie">
-                    </div>
-                    <div class="info-tarjetas">
-                        <h3>Título Serie</h3>
-                        <p>Breve descripción de la serie.</p>
-                        <a href="informacion.html"><button class="btn-vermas">Ver</button></a>
-                    </div>
-                </article>
+                </article>                 -->
             </div>
-            <div class="grid-paginas">
-                <button class="btn-pagina">&#10216</button>
-                <button class="btn-pagina pagina-activa">1</button>
-                <button class="btn-pagina">2</button>
-                <button class="btn-pagina">3</button>
-                <button class="btn-pagina">4</button>
-                <button class="btn-pagina">&#10217</button>
+            <div id="paginas-recomendadas" class="grid-paginas">
+                <button id="previo-recomendado" class="btn-pagina">&#10216</button>
+                <!-- <button class="btn-pagina pagina-activa">1</button> -->
+                <button id="next-recomendado" class="btn-pagina">&#10217</button>
             </div>
         </section>
     </main>
@@ -244,6 +200,7 @@
         </div>
     </footer>
     <script src="../javaScript/javaScript.js"></script>
+    <script src="../javaScript/javaScriptBuscador.js"></script>
 </body>
 
 </html>

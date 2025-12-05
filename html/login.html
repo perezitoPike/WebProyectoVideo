@@ -21,7 +21,7 @@
             </div>
 
             <form class="buscador" role="search">
-                <input class="campoLlenar" type="search" name="buscar" placeholder="Buscar Serie..."
+                <input id="buscador" class="campoLlenar" type="search" name="buscar" placeholder="Buscar Serie..."
                     aria-label="Buscar serie">
             </form>
 
@@ -32,6 +32,29 @@
             </div>
         </nav>
     </header>
+    <!-- Buscador -->
+    <main id="contenido-busqueda" class="ocultar-menu">
+        <section>
+            <h2 id="top-series-titulo">Resultados de Busqueda</h2>
+            <div id="contenedorBusqueda-series" class="grid-series">
+                <!-- <article class="tarjeta-serie">
+                    <div class="img-portada">
+                        <img src="../img/portadaK.jpg" alt="Portada de la serie">
+                    </div>
+                    <div class="info-tarjetas">
+                        <h3>Título Serie</h3>
+                        <p>Breve descripción de la serie.</p>
+                        <a href="informacion.html"><button class="btn-vermas">Ver</button></a>
+                    </div>
+                </article>                 -->
+            </div>
+            <div id="contenedor-pagina-busqueda" class="grid-paginas">
+                <button id="prev" class="btn-pagina">&#10216</button>
+                <!-- <button class="btn-pagina pagina-activa">1</button> -->
+                <button id="next" class="btn-pagina">&#10217</button>
+            </div>
+        </section>
+    </main>
 
     <!-- CONTENIDO PRINCIPAL -->
     <main id="contenido-principal">
@@ -85,6 +108,7 @@
         </div>
     </footer>
     <script src="../javaScript/javaScript.js"></script>
+    <script src="../javaScript/javaScriptBuscador.js"></script>
 </body>
 
 </html>
