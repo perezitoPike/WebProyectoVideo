@@ -1,3 +1,49 @@
+// const maximoTitulo = 1;
+// const maximoDescripcion = 3;
+
+// function limitarTextoTarjetas(etiquetaClase) {
+//     const elementos = document.querySelectorAll(etiquetaClase);
+//     console.log(elementos);
+//     elementos.forEach(item => {
+//         const titulo = item.querySelector('h3');
+//         const descripción = item.querySelector('p');
+//         limitarTexto(titulo, 1, false);
+//         limitarTexto(descripción, 2, true);
+//     });
+// }
+
+// function limitarTexto(etiqueta, maxLineas, useETC) {            
+//     const estilo = window.getComputedStyle(etiqueta);
+//     console.log(estilo);
+//     /* blockSize */
+//     const altura = parseFloat(estilo.blockSize);
+//     const maxAltura = altura * maxLineas;
+
+//     let textoCompleto = etiqueta.textContent;
+
+//     console.log(etiqueta.scrollHeight + " " + maxAltura);
+//     if(etiqueta.scrollHeight <= maxAltura) return;
+
+//     let palabras = textoCompleto.split(' ');
+//     let nuevoTexto = '';
+
+//     for (let i = 0; i < palabras.length; i++) {
+//         nuevoTexto += palabras[i] + ' ';
+//         etiqueta.textContent = nuevoTexto;
+//         if(etiqueta.scrollHeight > maxAltura){
+//             if(useETC)etiqueta.textContent = nuevoTexto.trim() + '...';
+//             else etiqueta.textContent = nuevoTexto.trim();
+//             break;
+//         }        
+//     }
+// }
+
+// limitarTextoTarjetas(".info-tarjetas");
+
+// window.addEventListener("resize", () => {
+//     limitarTextoTarjetas(".info-tarjetas");
+// });
+
 window.addEventListener("scroll", () => {
     const header = document.querySelector("header");
     if (window.scrollY > 1) {

@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>VideoPlus | Anime Online</title>
     <link rel="icon" href="../img/logoImageV2.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/estiloDirectorio.css">
+    <link rel="stylesheet" href="../css/estilosEscritorio.css">
+    <link rel="stylesheet" href="../css/estilosTableta.css">
+    <link rel="stylesheet" href="../css/estilosCelular.css">
 </head>
 
 <body>
@@ -57,11 +59,9 @@
 
     <!-- CONTENIDO PRINCIPAL -->
     <main id="contenido-principal">
-
         <!-- SECCION DESTACADA -->
         <section class="seccion-destacados">
             <h2 id="titulo-destacado" class="titulo-seccion">Serie destacada</h2>
-
             <article class="contenedor-portada">
                 <img src="../img/Fondo_test2.jpg" alt="Portada de la serie destacada">
 
@@ -81,8 +81,11 @@
         </section>
 
         <!-- FILTROS -->
-        <section>
-            <h2 id="filtros-titulo" class="titulo-seccion">Filtrar contenido</h2>
+        <section class="seccion-series">
+            <div class="titulo-seccion-contenedor">
+                <h2 id="top-series-titulo">Series del momento</h2>
+                <a href="informacion.html"><button class="btn-vermas">Ver más</button></a>
+            </div>
             <form class="form-filtros">
                 <div class="campo-filtro">
                     <label for="tipo">Tipo</label>
@@ -136,37 +139,6 @@
                 </div>
                 <!-- <button type="submit">Filtrar</button> -->
             </form>
-        </section>
-
-        <!-- Top Series -->
-        <section>
-            <h2 id="top-series-titulo">Top Series</h2>
-            <p class="descripcion-seccion">Las series más vistas</p>
-            <a href="informacion.html"><button class="btn-vermas">Ver más</button></a>
-            <div id="contenedor-series-top" class="grid-series">
-                <!-- <article class="tarjeta-serie">
-                    <div class="img-portada">
-                        <img src="../img/portadaK.jpg" alt="Portada de la serie">
-                    </div>
-                    <div class="info-tarjetas">
-                        <h3>Título Serie</h3>
-                        <p>Breve descripción de la serie.</p>
-                        <a href="informacion.html"><button class="btn-vermas">Ver</button></a>
-                    </div>
-                </article>                 -->
-            </div>
-            <div id="paginas-top" class="grid-paginas">
-                <button id="previo-top" class="btn-pagina">&#10216</button>
-                <!-- <button id="pagina-actual" class="btn-pagina pagina-activa">1</button> -->
-                <button id="next-top" class="btn-pagina">&#10217</button>
-            </div>
-        </section>
-
-        <!-- SERIES RECOMENDADAS -->
-        <section>
-            <h2 id="top-series-titulo">Series recomendadas</h2>
-            <p class="descripcion-seccion">Las series más vistas</p>
-            <a href="informacion.html"><button class="btn-vermas">Ver más</button></a>
             <div id="contenedor-recomendados" class="grid-series">
                 <!-- <article class="tarjeta-serie">
                     <div class="img-portada">
@@ -183,6 +155,31 @@
                 <button id="previo-recomendado" class="btn-pagina">&#10216</button>
                 <!-- <button class="btn-pagina pagina-activa">1</button> -->
                 <button id="next-recomendado" class="btn-pagina">&#10217</button>
+            </div>
+        </section>
+
+        <!-- Top Series -->
+        <section class="seccion-series">
+            <div class="titulo-seccion-contenedor">
+                <h2 id="top-series-titulo">Top Series</h2>
+                <a href="informacion.html"><button class="btn-vermas">Ver más</button></a>
+            </div>
+            <div id="contenedor-series-top" class="grid-series">
+                <!-- <article class="tarjeta-serie">
+                    <div class="img-portada">
+                        <img src="../img/portadaK.jpg" alt="Portada de la serie">
+                    </div>
+                    <div class="info-tarjetas">
+                        <h3>Título Serie</h3>
+                        <p>Breve descripción de la serie.</p>
+                        <a href="informacion.html"><button class="btn-vermas">Ver</button></a>
+                    </div>
+                </article>                 -->
+            </div>
+            <div id="paginas-top" class="grid-paginas">
+                <button id="previo-top" class="btn-pagina">&#10216</button>
+                <!-- <button id="pagina-actual" class="btn-pagina pagina-activa">1</button> -->
+                <button id="next-top" class="btn-pagina">&#10217</button>
             </div>
         </section>
     </main>

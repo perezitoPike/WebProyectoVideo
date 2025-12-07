@@ -1,0 +1,113 @@
+@media (max-width: 450px) {
+
+    #contenido-principal {
+        margin-top: 70px;
+    }
+
+    .buscador {
+        display: none;
+    }
+
+    header {
+        padding: 10px 15px;
+    }
+
+    .texto-superpuesto h3 {
+        font-size: 1.3rem;
+    }
+
+    .grid-series {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 0 10px;
+    }
+
+    .tarjeta-serie {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        padding: 10px;
+        position: relative;
+        height: 150px;
+    }
+
+    .tarjeta-serie .img-portada {
+        width: 40%;
+        height: 100%;
+    }
+
+    .tarjeta-serie .info-tarjetas {
+        width: 60%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        position: relative;
+    }
+
+    .tarjeta-serie h3 {
+        font-size: 1rem;
+    }
+
+    .tarjeta-serie p {
+        font-size: 0.85rem;
+    }
+
+    .tarjeta-serie .info-tarjetas .btn-vermas {
+        padding: 6px 12px;
+        left: auto;
+        transform: none;
+        right: 0;
+        bottom: 0;
+        margin-bottom: 0;
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+
+    .login-input {
+        max-width: 260px;
+        gap: 8px;
+    }
+
+    .login-input input {
+        font-size: 0.9rem;
+        padding: 7px 10px;
+    }
+
+    #top-series-titulo {
+        font-size: 1.5rem;
+    }
+
+    .form-filtros {
+        grid-template-columns: 1fr;
+    }
+
+    .campo-filtro {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .campo-filtro label {
+        width: 100px;
+    }
+
+    .btn-pagina {
+        padding: 6px 10px;
+        font-size: 0.9rem;
+    }
+
+    .capitulos img {
+        width: 60px;
+        height: 35px;
+    }
+
+    .numero-capitulo {
+        font-size: 13px;
+    }
+
+    .titulo-capitulo {
+        font-size: 12px;
+    }
+}
