@@ -14,7 +14,7 @@
     --texto-gris: #d0d0d0;
 
     --radius: 10px;
-    --altura-video: 400px;
+    --altura-video: 450px;
 }
 
 * {
@@ -39,9 +39,10 @@ body {
 
 main {
     flex: 1;
+        margin-top: 100px;
 }
 
-main section{
+main section {
     margin-top: 30px;
 }
 
@@ -65,10 +66,14 @@ header {
     border-bottom-color: var(--color-terciario);
 }
 
-#navegacion {
+#navegacion #nav-horizontal {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+#navegacion #nav-vertical {
+    display: none;
 }
 
 .logo img {
@@ -173,9 +178,9 @@ section #top-series-titulo {
 }
 
 /* SECCIÓN DESTACADA*/
-#contenido-principal {
+/* #contenido-principal {
     margin-top: 100px;
-}
+} */
 
 .titulo-seccion {
     font-size: 2rem;
@@ -311,7 +316,8 @@ section #top-series-titulo {
     align-items: center;
 }
 
-.titulo-seccion-contenedor h2, .titulo-seccion-contenedor .btn-vermas {
+.titulo-seccion-contenedor h2,
+.titulo-seccion-contenedor .btn-vermas {
     margin: 0;
 }
 
@@ -396,7 +402,8 @@ a {
     transform: scale(1.1);
 }
 
-.tarjeta-serie h3, .tarjeta-serie p{
+.tarjeta-serie h3,
+.tarjeta-serie p {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
@@ -463,48 +470,33 @@ footer p {
 }
 
 /* REPRODUCTOR */
-#seccion-reproductor {
+.contenedor-reproductor {
     display: flex;
-    align-items: flex-start;
-    grid-template-columns: 2fr 1fr;
     gap: 20px;
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 10px;
+    height: var(--altura-video);
+    padding: 20px;
 }
 
 .contenedor-video {
-    flex: 1;
-    position: relative;
+    flex: 4;
     width: 100%;
-    max-width: 100%;
-    padding-top: 56.25%;
-    border-radius: var(--radius);
-    overflow: hidden;
+    overflow: hidden; 
 }
 
 .contenedor-video iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    /* aspect-ratio: 16/9; */
-    border: none;
 }
 
 .lista-capitulos {
-    width: 320px;
-    max-width: 100%;
-    height: var(--video-height, 360px);
+    flex: 2;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-terciario) var(--color-primario);
+    background: var(--color-primario);
+    border: 2px solid var(--color-secundario);
+    border-radius: var(--radius);
     overflow-y: auto;
     overflow-x: hidden;
-    border-left: 2px solid var(--color-secundario);
-    padding-left: 10px;
-    background: var(--color-primario);
-    border-radius: var(--radius);
-    display: flex;
-    flex-direction: column;
 }
 
 .titulo-lista-capitulos {
@@ -512,7 +504,7 @@ footer p {
     top: 0;
     background: var(--color-primario);
     color: var(--color-terciario);
-    padding: 10px 0;
+    padding: 10px 20px;
     font-size: 1.2rem;
     font-weight: bold;
     border-bottom: 2px solid var(--color-terciario);
@@ -522,15 +514,15 @@ footer p {
 .lista-capitulos ul {
     list-style: none;
     margin: 0;
-    padding: 10px 0 0 0;
+    padding: 10px 10px;
+    gap: 20px;
 }
 
 .capitulos {
     display: flex;
     align-items: flex-start;
-    gap: 10px;
     padding: 10px;
-    border: 1px solid var(--color-secundario);
+    border: 2px solid var(--color-secundario);
     border-radius: var(--radius);
     margin-bottom: 10px;
     background: var(--color-cuarternario);
@@ -544,26 +536,38 @@ footer p {
 
 /* Miniatura */
 .capitulos img {
-    width: 80px;
-    height: 45px;
+    flex: 2;
+    width: 100%;
+    height: 50px;
     object-fit: cover;
     border-radius: var(--radius);
     border: 1px solid var(--color-terciario);
+    margin-right: 15px;
+}
+
+.capitulos div{
+    flex: 4;
 }
 
 /* Texto del capítulo */
+.numero-capitulo, .titulo-capitulo{
+    display: -webkit-box;
+    -webkit-line-clamp: 1; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
 .numero-capitulo {
-    display: block;
-    font-size: 14px;
+    font-size: 0.9rem;
     font-weight: bold;
     color: var(--color-terciario);
 }
 
 .titulo-capitulo {
-    display: block;
-    font-size: 13px;
+    font-size: 0.85rem;
     color: var(--texto-gris);
 }
+
 
 .lista-capitulos::-webkit-scrollbar {
     width: 8px;
@@ -582,15 +586,6 @@ footer p {
 
 .lista-capitulos::-webkit-scrollbar-thumb:hover {
     background: var(--color-secundario);
-}
-
-.lista-capitulos {
-    scrollbar-width: thin;
-    scrollbar-color: var(--color-terciario) var(--color-primario);
-}
-
-.seccion-capitulos {
-    display: none;
 }
 
 .ocultar-menu {

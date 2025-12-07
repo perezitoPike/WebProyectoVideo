@@ -5,8 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>VideoPlus | Anime Online</title>
-    <link rel="icon" href="../img/logoImageV2.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/estiloDirectorio.css">
+    <link rel="icon" href="../img/logoImageV3.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/estilosEscritorio.css">
+    <link rel="stylesheet" href="../css/estilosTableta.css">
+    <link rel="stylesheet" href="../css/estilosCelular.css">
 </head>
 
 <body>
@@ -14,27 +16,45 @@
     <!-- NAVEGACION -->
     <header>
         <nav id="navegacion">
-            <div class="logo">
-                <a href="directorio.html">
-                    <img src="../img/logoHorizontalv2.png" alt="Logo de VideoPlus">
-                </a>
+            <div id="nav-horizontal">
+                <div class="logo">
+                    <a href="directorio.html">
+                        <img src="../img/logoHorizontalv2.png" alt="Logo de VideoPlus">
+                    </a>
+                </div>
+                <form class="buscador" role="search">
+                    <input id="buscador" class="campoLlenar" type="search" name="buscar" placeholder="Buscar Serie...">
+                </form>
+                <div class="iconUser">
+                    <a href="login.html">
+                        <img src="../img/iconUser.png" alt="Icono usuario">
+                    </a>
+                </div>
             </div>
 
-            <form class="buscador" role="search">
-                <input id="buscador" class="campoLlenar" type="search" name="buscar" placeholder="Buscar Serie..."
-                    aria-label="Buscar serie">
-            </form>
-
-            <div class="iconUser">
-                <a href="login.html">
-                    <img src="../img/iconUser.png" alt="Icono usuario">
-                </a>
+            <div id="nav-vertical">
+                <div class="nav-superior">
+                    <div class="logo">
+                        <a href="directorio.html">
+                            <img src="../img/logoHorizontalv2.png" alt="Logo de VideoPlus">
+                        </a>
+                    </div>
+                    <div class="iconUser">
+                        <a href="login.html">
+                            <img src="../img/iconUser.png" alt="Icono usuario">
+                        </a>
+                    </div>
+                </div>
+                <form class="buscador" role="search">
+                    <input id="buscador" class="campoLlenar" type="search" name="buscar" placeholder="Buscar Serie...">
+                </form>
             </div>
         </nav>
     </header>
-    <!-- Buscador -->
-    <main id="contenido-busqueda" class="ocultar-menu">
-        <section>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        <section id="contenido-busqueda" class="ocultar-menu">
             <h2 id="top-series-titulo">Resultados de Busqueda</h2>
             <div id="contenedorBusqueda-series" class="grid-series">
                 <!-- <article class="tarjeta-serie">
@@ -54,11 +74,6 @@
                 <button id="next" class="btn-pagina">&#10217</button>
             </div>
         </section>
-    </main>
-
-    <!-- CONTENIDO PRINCIPAL -->
-    <main id="contenido-principal">
-
         <!-- SECCION PORTADA -->
         <section class="seccion-destacados">
             <h2 id="titulo-destacado" class="titulo-seccion">ONE PIECE</h2>
@@ -69,9 +84,12 @@
                 <div class="texto-superpuesto">
                     <!-- <h3>Título de la Serie</h3> -->
                     <p>
-                        One Piece es el tesoro legendario del que habla la serie de manga y anime homónima. Su objetivo
-                        principal es que Monkey D. Luffy, quien sueña con ser el Rey de los Piratas, lo encuentre junto
-                        a su tripulación. Este tesoro fue escondido por el anterior Rey de los Piratas, Gol D. Roger, en
+                        One Piece es el tesoro legendario del que habla la serie de manga y anime homónima. Su
+                        objetivo
+                        principal es que Monkey D. Luffy, quien sueña con ser el Rey de los Piratas, lo encuentre
+                        junto
+                        a su tripulación. Este tesoro fue escondido por el anterior Rey de los Piratas, Gol D.
+                        Roger, en
                         la última isla de la Grand Line.
                     </p>
 
@@ -84,7 +102,7 @@
         </section>
 
         <!-- Capitulos -->
-        <section>
+        <section class="seccion-series">
             <h2 id="top-series-titulo">Caputilos de la serie</h2>
             <div id="contenedor-capitulos" class="grid-series">
                 <!-- <article class="tarjeta-serie">
@@ -106,12 +124,12 @@
         </section>
 
         <!-- Series Similares -->
-        <section>
-            <h2 id="top-series-titulo">Series similares</h2>
-            <p class="descripcion-seccion">Otros usuarios tambien recominedan</p>
-            <button class="btn-vermas">Ver más</button>
-
-            <div id="contenedor-recomendados" class="grid-series">
+        <section class="seccion-series">
+            <div class="titulo-seccion-contenedor">
+                <h2 id="top-series-titulo">Series Similares</h2>
+                <a href="informacion.html"><button class="btn-vermas">Ver más</button></a>
+            </div>
+            <div id="contenedor-series-top" class="grid-series">
                 <!-- <article class="tarjeta-serie">
                     <div class="img-portada">
                         <img src="../img/portadaK.jpg" alt="Portada de la serie">
@@ -123,12 +141,13 @@
                     </div>
                 </article>                 -->
             </div>
+            <div id="paginas-top" class="grid-paginas">
+                <button id="previo-top" class="btn-pagina">&#10216</button>
+                <!-- <button id="pagina-actual" class="btn-pagina pagina-activa">1</button> -->
+                <button id="next-top" class="btn-pagina">&#10217</button>
+            </div>
         </section>
-        <div id="paginas-recomendadas" class="grid-paginas">
-            <button id="previo-recomendado" class="btn-pagina">&#10216</button>
-            <!-- <button class="btn-pagina pagina-activa">1</button> -->
-            <button id="next-recomendado" class="btn-pagina">&#10217</button>
-        </div>
+
     </main>
 
     <!-- FOOTER -->

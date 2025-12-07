@@ -5,8 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>VideoPlus | Anime Online</title>
-    <link rel="icon" href="../img/logoImageV2.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/estiloDirectorio.css">
+    <link rel="icon" href="../img/logoImageV3.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/estilosEscritorio.css">
+    <link rel="stylesheet" href="../css/estilosTableta.css">
+    <link rel="stylesheet" href="../css/estilosCelular.css">
 </head>
 
 <body>
@@ -14,28 +16,48 @@
     <!-- NAVEGACION -->
     <header>
         <nav id="navegacion">
-            <div class="logo">
-                <a href="directorio.html">
-                    <img src="../img/logoHorizontalv2.png" alt="Logo de VideoPlus">
-                </a>
+            <div id="nav-horizontal">
+                <div class="logo">
+                    <a href="directorio.html">
+                        <img src="../img/logoHorizontalv2.png" alt="Logo de VideoPlus">
+                    </a>
+                </div>
+                <form class="buscador" role="search">
+                    <input id="buscador" class="campoLlenar" type="search" name="buscar" placeholder="Buscar Serie...">
+                </form>
+                <div class="iconUser">
+                    <a href="login.html">
+                        <img src="../img/iconUser.png" alt="Icono usuario">
+                    </a>
+                </div>
             </div>
 
-            <form class="buscador" role="search">
-                <input id="buscador" class="campoLlenar" type="search" name="buscar" placeholder="Buscar Serie..."
-                    aria-label="Buscar serie">
-            </form>
-
-            <div class="iconUser">
-                <a href="login.html">
-                    <img src="../img/iconUser.png" alt="Icono usuario">
-                </a>
+            <div id="nav-vertical">
+                <div class="nav-superior">
+                    <div class="logo">
+                        <a href="directorio.html">
+                            <img src="../img/logoHorizontalv2.png" alt="Logo de VideoPlus">
+                        </a>
+                    </div>
+                    <div class="iconUser">
+                        <a href="login.html">
+                            <img src="../img/iconUser.png" alt="Icono usuario">
+                        </a>
+                    </div>
+                </div>
+                <form class="buscador" role="search">
+                    <input id="buscador" class="campoLlenar" type="search" name="buscar" placeholder="Buscar Serie...">
+                </form>
             </div>
         </nav>
     </header>
 
     <!-- Buscador -->
-    <main id="contenido-busqueda" class="ocultar-menu">
-        <section>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        <!-- Buscador -->
+        <section id="contenido-busqueda" class="ocultar-menu">
             <h2 id="top-series-titulo">Resultados de Busqueda</h2>
             <div id="contenedorBusqueda-series" class="grid-series">
                 <!-- <article class="tarjeta-serie">
@@ -55,64 +77,79 @@
                 <button id="next" class="btn-pagina">&#10217</button>
             </div>
         </section>
-    </main>
-
-    <!-- CONTENIDO PRINCIPAL -->
-    <main id="contenido-principal">
-        <section id="seccion-reproductor">
-            <!-- VIDEO -->
-            <div class="contenedor-video">
-                <iframe width="100%" height="360" src="https://www.youtube.com/embed/o0Bp0vL1aGg?si=7nmC7lezpBIkoN6M"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <!-- Contenido -->
+        <section id="seccion-reproductor" class="seccion-series">
+            <div class="titulo-seccion-contenedor">
+                <h2 id="top-series-titulo">Titulo anime</h2>
+                <a href="informacion.html"><button class="btn-vermas">Regresar</button></a>
             </div>
+            <div class="contenedor-reproductor">
+                <!-- VIDEO -->
+                <div class="contenedor-video">
+                    <iframe src="https://www.youtube.com/embed/o0Bp0vL1aGg?si=7nmC7lezpBIkoN6M"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
 
-            <!-- LISTA DE CAPÍTULOS VERTICAL -->
-            <aside class="lista-capitulos">
-                <h3 class="titulo-lista-capitulos">Capítulos</h3>
-                <ul id="contenedor-capitulos-vertical">
-                    <!-- <li class="capitulos">
-                        <img src="../img/portadaK.jpg" alt="Miniatura">
-                        <div>
-                            <span class="numero-capitulo">Capítulo 1</span>
-                            <span class="titulo-capitulo">El inicio de la aventura</span>
-                        </div>
-                    </li> -->
-                </ul>
-            </aside>
-        </section>
-
-
-        <!-- Capitulos Horizontal inferior-->
-        <section class="seccion-capitulos">
-            <h2 id="top-series-titulo">Caputilos de la serie</h2>
-            <div id="contenedor-capitulos" class="grid-series">
-                <!-- <article class="tarjeta-serie">
-                    <div class="img-portada">
-                        <img src="../img/portadaK.jpg" alt="Portada de la serie">
-                    </div>
-                    <div class="info-tarjetas">
-                        <h3>Título Serie</h3>
-                        <p>Breve descripción de la serie.</p>
-                        <a href="informacion.html"><button class="btn-vermas">Ver</button></a>
-                    </div>
-                </article>                 -->
-            </div>
-            <div id="paginas-capitulos" class="grid-paginas">
-                <button id="previo-capitulos" class="btn-pagina">&#10216</button>
-                <!-- <button class="btn-pagina pagina-activa">1</button> -->
-                <button id="next-capitulos" class="btn-pagina">&#10217</button>
+                <!-- LISTA DE CAPÍTULOS VERTICAL -->
+                <aside class="lista-capitulos">
+                    <h3 class="titulo-lista-capitulos">Capítulos</h3>
+                    <ul id="contenedor-capitulos-vertical">
+                        <li class="capitulos">
+                            <img src="../img/portadaK.jpg" alt="Miniatura">
+                            <div>
+                                <span class="numero-capitulo">Capítulo 1</span>
+                                <span class="titulo-capitulo">El inicio de la aventura</span>
+                            </div>
+                        </li>
+                        <li class="capitulos">
+                            <img src="../img/portadaK.jpg" alt="Miniatura">
+                            <div>
+                                <span class="numero-capitulo">Capítulo 1</span>
+                                <span class="titulo-capitulo">El inicio de la aventura</span>
+                            </div>
+                        </li>
+                        <li class="capitulos">
+                            <img src="../img/portadaK.jpg" alt="Miniatura">
+                            <div>
+                                <span class="numero-capitulo">Capítulo 1</span>
+                                <span class="titulo-capitulo">El inicio de la aventura</span>
+                            </div>
+                        </li>
+                        <li class="capitulos">
+                            <img src="../img/portadaK.jpg" alt="Miniatura">
+                            <div>
+                                <span class="numero-capitulo">Capítulo 1</span>
+                                <span class="titulo-capitulo">El inicio de la aventura</span>
+                            </div>
+                        </li>
+                        <li class="capitulos">
+                            <img src="../img/portadaK.jpg" alt="Miniatura">
+                            <div>
+                                <span class="numero-capitulo">Capítulo 1</span>
+                                <span class="titulo-capitulo">El inicio de la aventura</span>
+                            </div>
+                        </li>
+                        <li class="capitulos">
+                            <img src="../img/portadaK.jpg" alt="Miniatura">
+                            <div>
+                                <span class="numero-capitulo">Capítulo 1</span>
+                                <span class="titulo-capitulo">El inicio de la aventura</span>
+                            </div>
+                        </li>
+                    </ul>
+                </aside>
             </div>
         </section>
 
         <!-- Series Similares -->
-        <section>
-            <h2 id="top-series-titulo">Series similares</h2>
-            <p class="descripcion-seccion">Otros usuarios tambien recominedan</p>
-            <button class="btn-vermas">Ver más</button>
-
-            <div id="contenedor-recomendados" class="grid-series">
+        <section class="seccion-series">
+            <div class="titulo-seccion-contenedor">
+                <h2 id="top-series-titulo">Series Similares</h2>
+                <a href="informacion.html"><button class="btn-vermas">Ver más</button></a>
+            </div>
+            <div id="contenedor-series-top" class="grid-series">
                 <!-- <article class="tarjeta-serie">
                     <div class="img-portada">
                         <img src="../img/portadaK.jpg" alt="Portada de la serie">
@@ -124,12 +161,11 @@
                     </div>
                 </article>                 -->
             </div>
-        </section>
-        <div id="paginas-recomendadas" class="grid-paginas">
-            <button id="previo-recomendado" class="btn-pagina">&#10216</button>
-            <!-- <button class="btn-pagina pagina-activa">1</button> -->
-            <button id="next-recomendado" class="btn-pagina">&#10217</button>
-        </div>
+            <div id="paginas-top" class="grid-paginas">
+                <button id="previo-top" class="btn-pagina">&#10216</button>
+                <!-- <button id="pagina-actual" class="btn-pagina pagina-activa">1</button> -->
+                <button id="next-top" class="btn-pagina">&#10217</button>
+            </div>
         </section>
     </main>
 

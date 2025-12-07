@@ -1,6 +1,6 @@
 @media (max-width: 1100px) {
     main .seccion-series {
-        margin: 30px 10px auto 10px;
+        margin: 30px 10px;
     }
 
     .tarjeta-serie .info-tarjetas .btn-vermas {
@@ -9,13 +9,18 @@
 }
 
 @media (max-width: 768px) {
+
+    main {
+        margin-top: 80px;
+    }
+
     header {
         padding: 12px 20px;
     }
 
-    #contenido-principal {
-    margin-top: 80px;
-}
+    /* #contenido-principal {
+        margin-top: 80px;
+    } */
 
     .buscador input {
         width: 180px;
@@ -48,17 +53,20 @@
         font-size: 1.1rem;
     }
 
-    #seccion-reproductor {
-        flex-direction: column;
+    .contenedor-reproductor {
+        display: block;
+        height: auto;
+    }
+
+    .contenedor-video {
+        width: 100%;
+        height: 450px;
+        margin-bottom: 20px;
     }
 
     .lista-capitulos {
         width: 100%;
-        border-left: none;
-        border-top: 2px solid var(--color-secundario);
-        padding-left: 0;
-        padding-top: 10px;
         height: auto;
-        max-height: 320px;
+        max-height: 350px;
     }
 }

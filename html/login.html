@@ -5,8 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>VideoPlus | Anime Online</title>
-    <link rel="icon" href="../img/logoImageV2.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/estiloDirectorio.css">
+    <link rel="icon" href="../img/logoImageV3.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/estilosEscritorio.css">
+    <link rel="stylesheet" href="../css/estilosTableta.css">
+    <link rel="stylesheet" href="../css/estilosCelular.css">
 </head>
 
 <body>
@@ -14,27 +16,46 @@
     <!-- NAVEGACION -->
     <header>
         <nav id="navegacion">
-            <div class="logo">
-                <a href="directorio.html">
-                    <img src="../img/logoHorizontalv2.png" alt="Logo de VideoPlus">
-                </a>
+            <div id="nav-horizontal">
+                <div class="logo">
+                    <a href="directorio.html">
+                        <img src="../img/logoHorizontalv2.png" alt="Logo de VideoPlus">
+                    </a>
+                </div>
+                <form class="buscador" role="search">
+                    <input id="buscador" class="campoLlenar" type="search" name="buscar" placeholder="Buscar Serie...">
+                </form>
+                <div class="iconUser">
+                    <a href="login.html">
+                        <img src="../img/iconUser.png" alt="Icono usuario">
+                    </a>
+                </div>
             </div>
 
-            <form class="buscador" role="search">
-                <input id="buscador" class="campoLlenar" type="search" name="buscar" placeholder="Buscar Serie..."
-                    aria-label="Buscar serie">
-            </form>
-
-            <div class="iconUser">
-                <a href="login.html">
-                    <img src="../img/iconUser.png" alt="Icono usuario">
-                </a>
+            <div id="nav-vertical">
+                <div class="nav-superior">
+                    <div class="logo">
+                        <a href="directorio.html">
+                            <img src="../img/logoHorizontalv2.png" alt="Logo de VideoPlus">
+                        </a>
+                    </div>
+                    <div class="iconUser">
+                        <a href="login.html">
+                            <img src="../img/iconUser.png" alt="Icono usuario">
+                        </a>
+                    </div>
+                </div>
+                <form class="buscador" role="search">
+                    <input id="buscador" class="campoLlenar" type="search" name="buscar" placeholder="Buscar Serie...">
+                </form>
             </div>
         </nav>
     </header>
-    <!-- Buscador -->
-    <main id="contenido-busqueda" class="ocultar-menu">
-        <section>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        <!-- Buscador -->
+        <section id="contenido-busqueda" class="ocultar-menu">
             <h2 id="top-series-titulo">Resultados de Busqueda</h2>
             <div id="contenedorBusqueda-series" class="grid-series">
                 <!-- <article class="tarjeta-serie">
@@ -54,10 +75,7 @@
                 <button id="next" class="btn-pagina">&#10217</button>
             </div>
         </section>
-    </main>
 
-    <!-- CONTENIDO PRINCIPAL -->
-    <main id="contenido-principal">
         <!-- INICIAR SESION -->
         <section id="login-section" style="display: block;">
             <h2 id="top-series-titulo">LOGIN</h2>
