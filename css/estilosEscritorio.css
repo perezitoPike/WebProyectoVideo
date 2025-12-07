@@ -333,7 +333,8 @@ section #top-series-titulo {
     margin-bottom: 15px;
 }
 
-.descripcion-seccion a {
+#show-login,
+#show-register {
     color: var(--color-terciario);
 }
 

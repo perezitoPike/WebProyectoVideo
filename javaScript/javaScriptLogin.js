@@ -6,30 +6,38 @@ const showRegisterLink = document.getElementById('show-register');
 const showLoginLink = document.getElementById('show-login');
 
 if (showRegisterLink) {
-    showRegisterLink.addEventListener('click', function (e) {
-        e.preventDefault();
+    showRegisterLink.addEventListener('click', () => {
         loginSection.style.display = 'none';
         registerSection.style.display = 'block';
     });
 }
 
 if (showLoginLink) {
-    showLoginLink.addEventListener('click', function (e) {
-        e.preventDefault();
+    showLoginLink.addEventListener('click', () => {
         registerSection.style.display = 'none';
         loginSection.style.display = 'block';
     });
 }
 
 
-registerSection.querySelector(".btn-login").addEventListener("click", () => {
-    const username = registerForm.usuario.value.trim();
+registerSection.querySelector("button").addEventListener("click", () => {
+    const username = registerForm["usuario"].value.trim();
     const password = registerForm["password"].value.trim();
     const confirmPassword = registerForm["confirmar-password"].value.trim();
-    const email = registerForm.correo.value.trim();
+    const email = registerForm["correo"].value.trim();
 
     if (!username || !password || !confirmPassword || !email) {
         alert("Por favor completa todos los campos");
+        return;
+    }
+
+    if (password.length < 8) {
+        alert("La contraseña tiene que tener almenos 8 caracteres")
+        return;
+    }
+
+    if (!email.includes('@')) {
+        alert("Ingrese un correo electronico valido");
         return;
     }
 
@@ -45,18 +53,22 @@ registerSection.querySelector(".btn-login").addEventListener("click", () => {
         return;
     }
 
-    usuarios.push({ username, password, email });
+    usuarios.push({
+        "username": username,
+        "password": password,
+        "email": email
+    });
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
-    alert("Usuario registrado correctamente");
-
-    registerForm.reset();
-    registerSection.style.display = "none";
-    loginSection.style.display = "block";
+    // registerForm.reset();
+    let btnClose = alertaPopUp(`Registro exitoso\n Bienvenido ${username}`);
+    btnClose.addEventListener('click', () => {
+        window.location.href = "/html/directorio.html";
+    });
 });
 
-loginSection.querySelector(".btn-login").addEventListener("click", () => {
-    const username = loginForm.usuario.value.trim();
-    const password = loginForm.password.value.trim();
+loginSection.querySelector("button").addEventListener("click", () => {
+    const username = loginForm["usuario"].value.trim();
+    const password = loginForm["password"].value.trim();
 
     if (!username || !password) {
         alert("Por favor completa todos los campos");
@@ -67,8 +79,11 @@ loginSection.querySelector(".btn-login").addEventListener("click", () => {
     const usuarioEncontrado = usuarios.find(u => u.username === username && u.password === password);
 
     if (usuarioEncontrado) {
-        alert(`¡Bienvenido ${username}!`);
-        loginForm.reset();
+        // loginForm.reset();
+        btnClose = alertaPopUp(`Bienvenido ${username}`);
+        btnClose.addEventListener('click', () => {
+            window.location.href = "/html/directorio.html";
+        });
     } else {
         alert("Usuario o contraseña incorrectos");
     }
