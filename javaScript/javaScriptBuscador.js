@@ -2,81 +2,61 @@ const contenedorBusqueda = document.getElementById("contenedorBusqueda-series");
 const btnPrevBusqueda = document.getElementById("prev");
 const btnNextBusqueda = document.getElementById("next");
 const paginaActualBusqueda = document.getElementById("contenedor-pagina-busqueda");
+
+buscadorPager = new Pager(`https://api.jikan.moe/v4/anime?q=A&limit=12`, 12, btnNextBusqueda, btnPrevBusqueda, contenedorBusqueda, paginaActualBusqueda);
+
 const buscador = document.getElementById("buscador");
+const buscadorMovile = document.getElementById("buscadorMovile");
 const mainBusqueda = document.getElementById("contenido-busqueda");
-const mainPrincipal = document.getElementById("contenido-principal");
+const mainPrincipal = document.querySelectorAll(".contenido-principal");
 
-let pagina = 1;
-let textoBusqueda = "";
-
-function mostrarResultados(lista) {
-    contenedorBusqueda.innerHTML = "";
-
-    lista.forEach(item => {
-        const card = `
-            <article class="tarjeta-serie">
-                <div class="img-portada">
-                    <img src="${item.images.jpg.image_url}" alt="${item.title}">
-                </div>
-                <div class="info-tarjetas">
-                    <h3>${item.title}</h3>
-                    <p>${item.synopsis ? item.synopsis.slice(0, 100) + "..." : "Sin descripción"}</p>
-                    <a href="informacion.html?id=${item.mal_id}">
-                        <button class="btn-vermas">Ver</button>
-                    </a>
-                </div>
-            </article>
-        `;
-        contenedorBusqueda.innerHTML += card;
+function hideBusqueda() {
+    mainPrincipal.forEach(element => {
+        console.log(element);
+        element.classList.remove("ocultar-menu");
+        element.classList.add("fadeIn");
+        element.classList.remove("fadeOut");
     });
+    mainBusqueda.classList.add("ocultar-menu");
+    mainBusqueda.classList.remove("fadeIn");
+    mainBusqueda.classList.add("fadeOut");
 }
 
-btnNextBusqueda.addEventListener("click", () => {
-    pagina++;
-    paginaActualBusqueda.textContent = pagina;
-    traerAnimeBuscados();
+function showBusqueda() {
+    mainPrincipal.forEach(element => {
+        element.classList.add("ocultar-menu");
+        element.classList.remove("fadeIn");
+        element.classList.add("fadeOut");
+    });
+    mainBusqueda.classList.remove("ocultar-menu");
+    mainBusqueda.classList.remove("fadeOut");
+    mainBusqueda.classList.add("fadeIn");
+}
+
+if (buscador) buscador.addEventListener("input", () => {
+    SendSearch(buscador);
 });
 
-btnPrevBusqueda.addEventListener("click", () => {
-    if (pagina > 1) {
-        pagina--;
-        paginaActualBusqueda.textContent = pagina;
-        traerAnimeBuscados();
-    }
+if (buscadorMovile) buscadorMovile.addEventListener("input", () => {
+    SendSearch(buscadorMovile);
 });
 
 let time;
-if(buscador)buscador.addEventListener("input", () => {
+function SendSearch(searcher){
     clearTimeout(time);
     time = setTimeout(() => {
-        hacerBusqueda(buscador.value.trim());
+        hacerBusqueda(searcher.value.trim());
     }, 1000);
-});
+}
 
 async function hacerBusqueda(query) {
 
     if (query.length < 3) {
         contenedorBusqueda.innerHTML = "";
-        mainPrincipal.classList.remove("ocultar-menu");
-        mainBusqueda.classList.add("ocultar-menu");
+        hideBusqueda();
         return;
     }
-    mainPrincipal.classList.add("ocultar-menu");
-    mainBusqueda.classList.remove("ocultar-menu");
-
-    try {
-        const respuesta = await fetch(`https://api.jikan.moe/v4/anime?q=${query}&limit=12`);
-        const data = await respuesta.json();
-
-        if (!data.data) {
-            contenedorBusqueda.innerHTML = "<p>No encontrado</p>";
-            return;
-        }
-
-        mostrarResultados(data.data);
-
-    } catch (e) {
-        contenedorBusqueda.innerHTML = `<p style="color:red">Error en la API (espera unos segundos)</p>`;
-    }
+    buscadorPager.updateUrl(`https://api.jikan.moe/v4/anime?q=${query}&limit=12`);
+    buscadorPager.GetAnimes();
+    showBusqueda();
 }
-

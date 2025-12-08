@@ -45,7 +45,8 @@
                     </div>
                 </div>
                 <form class="buscador" role="search">
-                    <input id="buscador" class="campoLlenar" type="search" name="buscar" placeholder="Buscar Serie...">
+                    <input id="buscadorMovile" class="campoLlenar" type="search" name="buscar"
+                        placeholder="Buscar Serie...">
                 </form>
             </div>
         </nav>
@@ -73,13 +74,13 @@
                 <!-- <button class="btn-pagina pagina-activa">1</button> -->
                 <button id="next" class="btn-pagina">&#10217</button>
             </div>
-        </section>      
+        </section>
 
         <!-- FILTROS -->
-        <section class="seccion-series">
+        <section class="contenido-principal seccion-series">
             <div class="titulo-seccion-contenedor">
-                <h2 id="top-series-titulo">Nuestro Catalogo</h2>
-                <a href="informacion.html"><button class="btn-vermas">Regresar</button></a>
+                <h2 id="top-series-titulo">Series del momento</h2>
+                <a href="informacion.html"><button class="btn-vermas">Ver más</button></a>
             </div>
             <form class="form-filtros">
                 <div class="campo-filtro">
@@ -110,7 +111,7 @@
                         <option value="37">Supernatural</option>
                     </select>
                 </div>
-                
+
                 <div class="campo-filtro">
                     <label for="estado">Estado</label>
                     <select name="estado" id="estado">
@@ -143,14 +144,14 @@
                         <p>Breve descripción de la serie.</p>
                         <a href="informacion.html"><button class="btn-vermas">Ver</button></a>
                     </div>
-                </article>      -->
+                </article>                 -->
             </div>
             <div id="paginas-recomendadas" class="grid-paginas">
                 <button id="previo-recomendado" class="btn-pagina">&#10216</button>
                 <!-- <button class="btn-pagina pagina-activa">1</button> -->
                 <button id="next-recomendado" class="btn-pagina">&#10217</button>
             </div>
-        </section>        
+        </section>
     </main>
 
     <!-- FOOTER -->
@@ -165,7 +166,9 @@
             <a href="#"><img src="../img/icons/whatsapp.png" alt="WhatsApp"></a>
         </div>
     </footer>
-    <script src="../javaScript/javaScript.js"></script>
+    <script src="../javaScript/javaScriptClasePaginador.js"></script>
+    <!-- <script src="../javaScript/javaScript.js"></script> -->
+     <script src="../javaScript/javaScriptCatalogo.js"></script>
     <script src="../javaScript/javaScriptBuscador.js"></script>
 </body>
 

@@ -35,11 +35,16 @@ class Pager {
         }
     }
 
+    updateUrl(url){
+        this.url = url;
+    }
+
     async GetAnimes() {
         try {
             // const url = `https://api.jikan.moe/v4/top/anime?page=1`;
             const resp = await fetch(this.url);
             const data = await resp.json();
+            console.log(data.data);
             this.createAnimeList(data.data);
         } catch (error) {
             console.error("Error al obtener recomendados:", error);
@@ -58,7 +63,7 @@ class Pager {
             currentAnimes.push(element);
             currentAdded++;
 
-            if (currentAdded >= this.maxContent) {
+            if (currentAdded >= this.maxContent || !element) {
                 this.listAnimesTop.push(currentAnimes);
                 currentAnimes = [];
                 currentAdded = 0;
@@ -104,7 +109,7 @@ class Pager {
 
         if (this.containerSerie) this.containerSerie.innerHTML = "";
 
-        const listToShow = this.listAnimesTop[index];
+        let listToShow = this.listAnimesTop[index];
 
         listToShow.forEach(element => {
             const html = `

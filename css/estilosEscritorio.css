@@ -590,7 +590,7 @@ footer p {
 }
 
 .ocultar-menu {
-    display: none;
+    display: none !important;
 }
 
 /* PAGINADOR */
@@ -657,4 +657,22 @@ footer p {
 .btn-login:hover,
 .acciones-portada button:hover {
     transform: scale(1.08);
+}
+
+.fadeOut {
+  animation: fadeOut .5s forwards;
+}
+
+.fadeIn {
+  animation: fadeIn .5s forwards;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
