@@ -35,12 +35,13 @@ class Pager {
         }
     }
 
-    updateUrl(url){
+    updateUrl(url) {
         this.url = url;
     }
 
     async GetAnimes() {
         try {
+            this.showLoader();
             // const url = `https://api.jikan.moe/v4/top/anime?page=1`;
             const resp = await fetch(this.url);
             const data = await resp.json();
@@ -48,6 +49,9 @@ class Pager {
             this.createAnimeList(data.data);
         } catch (error) {
             console.error("Error al obtener recomendados:", error);
+            if (this.containerSerie) this.containerSerie.innerHTML = "<p style='color:red;'>Error al cargar los animes</p>";
+        } finally{
+            this.hideLoader();
         }
     }
 
@@ -110,7 +114,10 @@ class Pager {
         if (this.containerSerie) this.containerSerie.innerHTML = "";
 
         let listToShow = this.listAnimesTop[index];
-
+        if(!listToShow){
+            if (this.containerSerie) this.containerSerie.innerHTML = "<p style='color:white;'>No se encontraron animes</p>";
+            return;
+        }
         listToShow.forEach(element => {
             const html = `
                 <article class="tarjeta-serie">
@@ -129,11 +136,27 @@ class Pager {
             this.containerSerie.innerHTML += html;
         });
     }
+
+    showLoader() {
+        if (!this.containerSerie) return;
+        if (this.containerSerie.querySelector('.loader-overlay')) return;
+        const overlay = document.createElement('div');
+        overlay.className = 'loader-overlay';
+        overlay.innerHTML = `<div class="loader"></div>`;
+        this.containerSerie.appendChild(overlay);
+    }
+
+    hideLoader() {
+        if (!this.containerSerie) return;
+        const overlay = this.containerSerie.querySelector('.loader-overlay');
+        if (overlay) overlay.remove();
+    }
 }
 
 class PagerMultiPageList extends Pager {
     async GetAnimes() {
         try {
+            this.showLoader();
             // const url = `https://api.jikan.moe/v4/top/anime?page=1`;
             const resp = await fetch(this.url);
             const data = await resp.json();
@@ -141,6 +164,9 @@ class PagerMultiPageList extends Pager {
             this.createAnimeList(limitRecomends.map(item => item.entry));
         } catch (error) {
             console.error("Error al obtener recomendados:", error);
+            if (this.containerSerie) this.containerSerie.innerHTML = "<p style='color:red;'>Error al cargar los animes</p>";
+        } finally {
+            this.hideLoader();
         }
     }
 }
@@ -158,8 +184,7 @@ class PagerChapters extends Pager {
 
     async GetAnimes() {
         try {
-            // animeId = 1;
-            // pagina = 2;
+            this.showLoader();
 
             // let urlAnime = `https://api.jikan.moe/v4/anime/${animeId}`;
             const resAnime = await fetch(this.url_img);
@@ -177,6 +202,9 @@ class PagerChapters extends Pager {
             this.createVerticalChapters(this.image_urlChapter);
         } catch (error) {
             console.error("Error al obtener capítulos:", error);
+            if (this.containerSerie) this.containerSerie.innerHTML = "<p style='color:red;'>Error al cargar los animes</p>";
+        }finally{
+            this.hideLoader();
         }
     }
 
@@ -200,7 +228,7 @@ class PagerChapters extends Pager {
     }
 
     showAnimePage(index) {
-        if(!this.containerSerie){
+        if (!this.containerSerie) {
             return;
         }
         this.activeBtnPage(index);

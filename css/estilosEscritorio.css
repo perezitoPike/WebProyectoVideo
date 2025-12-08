@@ -356,6 +356,7 @@ a {
 
 /* Tarjetas */
 .grid-series {
+    position: relative;
     max-width: 1100px;
     min-height: 500px;
     padding: 0px 20px;
@@ -660,11 +661,11 @@ footer p {
 }
 
 .fadeOut {
-  animation: fadeOut .5s forwards;
+  animation: fadeOut .25s forwards;
 }
 
 .fadeIn {
-  animation: fadeIn .5s forwards;
+  animation: fadeIn .25s forwards;
 }
 
 @keyframes fadeOut {
