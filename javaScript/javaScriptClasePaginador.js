@@ -86,7 +86,7 @@ class Pager {
         this.listBtnPages = [];
 
         for (let i = 0; i < this.listAnimesTop.length; i++) {
-            const newBtn = document.createElement('button');
+            let newBtn = document.createElement('button');
             newBtn.classList.add('btn-pagina');
             newBtn.textContent = i + 1;
 
@@ -119,7 +119,7 @@ class Pager {
             return;
         }
         listToShow.forEach(element => {
-            const html = '';
+            let html = '';
             let rutaActual = window.location.pathname;
 
             if (rutaActual === '/' || rutaActual.endsWith('/index.html')) {
@@ -163,7 +163,7 @@ class Pager {
     showLoader() {
         if (!this.containerSerie) return;
         if (this.containerSerie.querySelector('.loader-overlay')) return;
-        const overlay = document.createElement('div');
+        let overlay = document.createElement('div');
         overlay.className = 'loader-overlay';
         overlay.innerHTML = `<div class="loader"></div>`;
         this.containerSerie.appendChild(overlay);
@@ -171,7 +171,7 @@ class Pager {
 
     hideLoader() {
         if (!this.containerSerie) return;
-        const overlay = this.containerSerie.querySelector('.loader-overlay');
+        let overlay = this.containerSerie.querySelector('.loader-overlay');
         if (overlay) overlay.remove();
     }
 }
@@ -260,10 +260,10 @@ class PagerChapters extends Pager {
 
         if (this.containerSerie) this.containerSerie.innerHTML = "";
 
-        const listToShow = this.listAnimesTop[index];
+        let listToShow = this.listAnimesTop[index];
 
         listToShow.forEach(element => {
-            const html = `           
+            let html = `           
                 <article class="tarjeta-serie">
                 
                     <div class="img-portada">
