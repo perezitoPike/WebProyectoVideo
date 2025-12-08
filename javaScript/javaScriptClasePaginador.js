@@ -119,7 +119,12 @@ class Pager {
             return;
         }
         listToShow.forEach(element => {
-            const html = `
+            const html = '';
+            let rutaActual = window.location.pathname;
+
+            if (rutaActual === '/' || rutaActual.endsWith('/index.html')) {
+                // console.log('Estás en la página principal (index.html)');
+                html = `
                 <article class="tarjeta-serie">
                     <div class="img-portada">
                         <img src="${element.images?.jpg.image_url}" alt="${element.title}">
@@ -127,11 +132,29 @@ class Pager {
                     <div class="info-tarjetas">
                         <h3>${element.title}</h3>
                         <p>${element.synopsis ? element.synopsis.slice(0, 100) + "..." : "Sin descripción"}</p>
-                        <a href="../html/informacion.html?id=${element.mal_id}">
+                        <a href="html/informacion.html?id=${element.mal_id}">
                             <button class="btn-vermas">Ver</button>
                         </a>
                     </div>
                 </article>`;
+            } else {
+                // console.log('No estás en la página principal');
+                html = `
+                <article class="tarjeta-serie">
+                    <div class="img-portada">
+                        <img src="${element.images?.jpg.image_url}" alt="${element.title}">
+                    </div>
+                    <div class="info-tarjetas">
+                        <h3>${element.title}</h3>
+                        <p>${element.synopsis ? element.synopsis.slice(0, 100) + "..." : "Sin descripción"}</p>
+                        <a href="informacion.html?id=${element.mal_id}">
+                            <button class="btn-vermas">Ver</button>
+                        </a>
+                    </div>
+                </article>`;
+            }
+
+
 
             this.containerSerie.innerHTML += html;
         });
