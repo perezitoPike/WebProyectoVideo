@@ -1,6 +1,6 @@
 @media (max-width: 450px) {
 
-    main{
+    main {
         margin-top: 100px;
     }
 
@@ -55,8 +55,19 @@
         padding: 10px 20px;
     }
 
+    .texto-superpuesto {
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    }
+
     .texto-superpuesto h3 {
         font-size: 1.3rem;
+    }
+
+    .texto-superpuesto p {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
     }
 
     .grid-series {

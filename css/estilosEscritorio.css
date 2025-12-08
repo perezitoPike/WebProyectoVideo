@@ -221,7 +221,7 @@ section #top-series-titulo {
     bottom: 0;
     width: 100%;
     padding: 25px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 70%, transparent) 100%;
 }
 
 .texto-superpuesto h3 {

@@ -50,7 +50,7 @@ class Pager {
         } catch (error) {
             console.error("Error al obtener recomendados:", error);
             if (this.containerSerie) this.containerSerie.innerHTML = "<p style='color:red;'>Error al cargar los animes</p>";
-        } finally{
+        } finally {
             this.hideLoader();
         }
     }
@@ -114,7 +114,7 @@ class Pager {
         if (this.containerSerie) this.containerSerie.innerHTML = "";
 
         let listToShow = this.listAnimesTop[index];
-        if(!listToShow){
+        if (!listToShow) {
             if (this.containerSerie) this.containerSerie.innerHTML = "<p style='color:white;'>No se encontraron animes</p>";
             return;
         }
@@ -203,7 +203,7 @@ class PagerChapters extends Pager {
         } catch (error) {
             console.error("Error al obtener capítulos:", error);
             if (this.containerSerie) this.containerSerie.innerHTML = "<p style='color:red;'>Error al cargar los animes</p>";
-        }finally{
+        } finally {
             this.hideLoader();
         }
     }
@@ -213,13 +213,15 @@ class PagerChapters extends Pager {
             let chapterNum = 1;
             this.listAnimesTop.forEach(element => {
                 let newElement = `
-                <li class="capitulos">
-                    <img src="${image_url}">
-                    <div>
-                        <span class="numero-capitulo">Capitulo ${chapterNum}</span>
-                        <span class="titulo-capitulo">${element.title}</span>
-                    </div>
-                </li>
+                <a href="reproductor.html">
+                    <li class="capitulos">
+                        <img src="${image_url}">
+                        <div>
+                            <span class="numero-capitulo">Capitulo ${chapterNum}</span>
+                            <span class="titulo-capitulo">${element.title}</span>
+                        </div>
+                    </li>
+                </a>
             `;
                 this.containerVertical.innerHTML += newElement;
                 chapterNum++;
@@ -238,19 +240,34 @@ class PagerChapters extends Pager {
         const listToShow = this.listAnimesTop[index];
 
         listToShow.forEach(element => {
-            const html = `
+            // const html = `
+            //     <article class="tarjeta-serie">
+            //         <div class="img-portada">
+            //             <img src="${this.image_urlChapter}" alt="${element.title}">
+            //         </div>
+            //         <div class="info-tarjetas">
+            //             <h3>${element.title}</h3>
+            //             <p>${element.synopsis ? element.synopsis.slice(0, 100) + "..." : "Sin descripción"}</p>
+            //             <a href="reproductor.html?id=${element.mal_id}">
+            //                 <button class="btn-vermas">Ver</button>
+            //             </a>
+            //         </div>
+            //     </article>`;
+            const html = `           
                 <article class="tarjeta-serie">
+                
                     <div class="img-portada">
                         <img src="${this.image_urlChapter}" alt="${element.title}">
                     </div>
                     <div class="info-tarjetas">
                         <h3>${element.title}</h3>
                         <p>${element.synopsis ? element.synopsis.slice(0, 100) + "..." : "Sin descripción"}</p>
-                        <a href="informacion.html?id=${element.mal_id}">
+                        <a href="reproductor.html?id=${element.mal_id}">
                             <button class="btn-vermas">Ver</button>
                         </a>
                     </div>
-                </article>`;
+                    </article>
+           `;
             this.containerSerie.innerHTML += html;
         });
     }
