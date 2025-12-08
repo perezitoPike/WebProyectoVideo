@@ -127,7 +127,7 @@ class Pager {
                     <div class="info-tarjetas">
                         <h3>${element.title}</h3>
                         <p>${element.synopsis ? element.synopsis.slice(0, 100) + "..." : "Sin descripción"}</p>
-                        <a href="informacion.html?id=${element.mal_id}">
+                        <a href="../html/informacion.html?id=${element.mal_id}">
                             <button class="btn-vermas">Ver</button>
                         </a>
                     </div>
@@ -240,19 +240,6 @@ class PagerChapters extends Pager {
         const listToShow = this.listAnimesTop[index];
 
         listToShow.forEach(element => {
-            // const html = `
-            //     <article class="tarjeta-serie">
-            //         <div class="img-portada">
-            //             <img src="${this.image_urlChapter}" alt="${element.title}">
-            //         </div>
-            //         <div class="info-tarjetas">
-            //             <h3>${element.title}</h3>
-            //             <p>${element.synopsis ? element.synopsis.slice(0, 100) + "..." : "Sin descripción"}</p>
-            //             <a href="reproductor.html?id=${element.mal_id}">
-            //                 <button class="btn-vermas">Ver</button>
-            //             </a>
-            //         </div>
-            //     </article>`;
             const html = `           
                 <article class="tarjeta-serie">
                 
@@ -266,7 +253,7 @@ class PagerChapters extends Pager {
                             <button class="btn-vermas">Ver</button>
                         </a>
                     </div>
-                    </article>
+                </article>
            `;
             this.containerSerie.innerHTML += html;
         });

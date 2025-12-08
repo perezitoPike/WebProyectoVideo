@@ -62,7 +62,7 @@ registerSection.querySelector("button").addEventListener("click", () => {
     // registerForm.reset();
     let btnClose = alertaPopUp(`Registro exitoso\n Bienvenido ${username}`);
     btnClose.addEventListener('click', () => {
-        window.location.href = "/html/directorio.html";
+        window.location.href = "../index.html";
     });
 });
 
@@ -82,7 +82,7 @@ loginSection.querySelector("button").addEventListener("click", () => {
         // loginForm.reset();
         btnClose = alertaPopUp(`Bienvenido ${username}`);
         btnClose.addEventListener('click', () => {
-            window.location.href = "/html/directorio.html";
+            window.location.href = "../index.html";
         });
     } else {
         alert("Usuario o contraseña incorrectos");
