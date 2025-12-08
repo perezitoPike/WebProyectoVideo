@@ -338,6 +338,16 @@ section #top-series-titulo {
     color: var(--color-terciario);
 }
 
+#show-login:hover,
+#show-register:hover {
+    cursor: pointer;
+    font-size: 1.15rem;
+    transition: font-size 0.5s ease;
+}
+/* #show-login::after,
+#show-register::after {
+} */
+
 a {
     text-decoration: none;
 }
