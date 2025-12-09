@@ -45,7 +45,7 @@ class Pager {
             // const url = `https://api.jikan.moe/v4/top/anime?page=1`;
             const resp = await fetch(this.url);
             const data = await resp.json();
-            console.log(data.data);
+            // console.log(data.data);
             this.createAnimeList(data.data);
         } catch (error) {
             console.error("Error al obtener recomendados:", error);
@@ -137,6 +137,7 @@ class Pager {
                         </a>
                     </div>
                 </article>`;
+                console.log("Creando la primera vez: " + html);
             } else {
                 // console.log('No estás en la página principal');
                 html = `
