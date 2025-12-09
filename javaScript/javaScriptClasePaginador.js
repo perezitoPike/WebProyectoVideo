@@ -147,7 +147,7 @@ class Pager {
                     <div class="info-tarjetas">
                         <h3>${element.title}</h3>
                         <p>${element.synopsis ? element.synopsis.slice(0, 100) + "..." : "Sin descripción"}</p>
-                        <a href="informacion.html>
+                        <a href="informacion.html">
                             <button class="btn-vermas">Ver</button>
                         </a>
                     </div>
