@@ -19,12 +19,11 @@ if (showLoginLink) {
     });
 }
 
-
 registerSection.querySelector("button").addEventListener("click", () => {
-    const username = registerForm["usuario"].value.trim();
-    const password = registerForm["password"].value.trim();
-    const confirmPassword = registerForm["confirmar-password"].value.trim();
-    const email = registerForm["correo"].value.trim();
+    const username = registerForm["usuario-register"].value.trim();
+    const password = registerForm["password-register"].value.trim();
+    const confirmPassword = registerForm["confirmar-password-register"].value.trim();
+    const email = registerForm["correo-register"].value.trim();
 
     if (!username || !password || !confirmPassword || !email) {
         alert("Por favor completa todos los campos");
@@ -67,8 +66,8 @@ registerSection.querySelector("button").addEventListener("click", () => {
 });
 
 loginSection.querySelector("button").addEventListener("click", () => {
-    const username = loginForm["usuario"].value.trim();
-    const password = loginForm["password"].value.trim();
+    const username = loginForm["usuario-login"].value.trim();
+    const password = loginForm["password-login"].value.trim();
 
     if (!username || !password) {
         alert("Por favor completa todos los campos");

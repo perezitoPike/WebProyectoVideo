@@ -132,7 +132,7 @@ class Pager {
                     <div class="info-tarjetas">
                         <h3>${element.title}</h3>
                         <p>${element.synopsis ? element.synopsis.slice(0, 100) + "..." : "Sin descripción"}</p>
-                        <a href="html/informacion.html?id=${element.mal_id}">
+                        <a href="html/informacion.html">
                             <button class="btn-vermas">Ver</button>
                         </a>
                     </div>
@@ -147,15 +147,12 @@ class Pager {
                     <div class="info-tarjetas">
                         <h3>${element.title}</h3>
                         <p>${element.synopsis ? element.synopsis.slice(0, 100) + "..." : "Sin descripción"}</p>
-                        <a href="informacion.html?id=${element.mal_id}">
+                        <a href="informacion.html>
                             <button class="btn-vermas">Ver</button>
                         </a>
                     </div>
                 </article>`;
-            }
-
-
-
+            }            
             this.containerSerie.innerHTML += html;
         });
     }

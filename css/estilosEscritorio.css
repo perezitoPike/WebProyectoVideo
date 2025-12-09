@@ -139,6 +139,11 @@ section #top-series-titulo {
     font-weight: bold;
     width: 100%;
     display: block;
+    font-size: 1.1rem;
+}
+
+.login-input label:hover{
+    cursor: pointer;
 }
 
 
