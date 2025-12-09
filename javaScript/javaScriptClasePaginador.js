@@ -121,7 +121,7 @@ class Pager {
         listToShow.forEach(element => {
             let html = '';
             let rutaActual = window.location.pathname;
-
+            console.log("Ruta actual: " + rutaActual);
             if (rutaActual === '/' || rutaActual.endsWith('/index.html')) {
                 // console.log('Estás en la página principal (index.html)');
                 html = `
@@ -137,7 +137,7 @@ class Pager {
                         </a>
                     </div>
                 </article>`;
-                console.log("Creando la primera vez: " + html);
+                console.log("Creando la primera vez con html/informacion.html: " + html);
             } else {
                 // console.log('No estás en la página principal');
                 html = `
@@ -153,6 +153,7 @@ class Pager {
                         </a>
                     </div>
                 </article>`;
+                console.log("Creando la primera vez con informacion.html: " + html);
             }            
             this.containerSerie.innerHTML += html;
         });
