@@ -292,6 +292,7 @@ section #top-series-titulo {
 .campo-filtro select:hover {
     box-shadow: 0 0 10px var(--color-terciario);
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .campoLlenar:hover {
@@ -673,6 +674,7 @@ footer p {
 .btn-login:hover,
 .acciones-portada button:hover {
     transform: scale(1.08);
+    cursor: pointer;
 }
 
 .fadeOut {
