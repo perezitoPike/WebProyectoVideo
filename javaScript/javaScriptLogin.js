@@ -25,6 +25,20 @@ registerSection.querySelector("button").addEventListener("click", () => {
     const confirmPassword = registerForm["confirmar-password-register"].value.trim();
     const email = registerForm["correo-register"].value.trim();
 
+    let isNumber = false;
+
+    for (let i = 0; i < username.length; i++) {
+        if (!isNaN(parseInt(username[i]))) {
+            isNumber = true;
+            break;
+        }
+    }
+
+    if(isNumber){
+        alert("Nombre de usuario no valido");
+        return;
+    }
+
     if (!username || !password || !confirmPassword || !email) {
         alert("Por favor completa todos los campos");
         return;
