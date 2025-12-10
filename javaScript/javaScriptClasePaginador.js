@@ -45,7 +45,7 @@ class Pager {
             // const url = `https://api.jikan.moe/v4/top/anime?page=1`;
             const resp = await fetch(this.url);
             const data = await resp.json();
-            // console.log(data.data);
+            console.log(data.data);
             this.createAnimeList(data.data);
         } catch (error) {
             console.error("Error al obtener recomendados:", error);
@@ -122,7 +122,7 @@ class Pager {
             let html = '';
             let rutaActual = window.location.pathname;
             console.log("Ruta actual: " + rutaActual);
-            if (rutaActual === '/' || rutaActual.endsWith('/index.html')) {
+            if (rutaActual === '/' || rutaActual.endsWith('/index.html') || rutaActual.endsWith('/WebProyectoVideo/')) {
                 // console.log('Estás en la página principal (index.html)');
                 html = `
                 <article class="tarjeta-serie">
